@@ -49,8 +49,8 @@ void main_interface_animation()
 		Sleep(30);
 	}
 	Sleep(500);
-	gotoxy(56,24);cout<<"Akhilesh     4SF18IS008";
-	gotoxy(56,23);cout<<"Amaan        4SF18IS010";
+	gotoxy(56,23);cout<<"Akhilesh     4SF18IS008";
+	gotoxy(56,24);cout<<"Amaan        4SF18IS010";
 	Sleep(4000);
 	system("cls");
 }
