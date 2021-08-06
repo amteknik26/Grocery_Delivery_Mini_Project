@@ -1,0 +1,3 @@
+st02|walmart|Kadri|7410258963$
+st03|Easyday|Attavar|7458963210$
+st01|Spar|Padil|9517536842$

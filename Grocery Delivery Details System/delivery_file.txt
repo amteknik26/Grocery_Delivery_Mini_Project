@@ -1,0 +1,4 @@
+1|2|Amaan|walmart|item1*5 + item2*5|570|Arjun|30-07-2021 00:54:26|Successful$
+2|1|Akhil|Spar|item1*5 + item3*10|470|Swaaz|30-07-2021 00:56:48|Successful$
+5|3|Akhil|walmart|item1*10 + item2*10|1120|Arjun|31-07-2021 21:01:57|Successful$
+6|4|Amaan|Spar|item1*10 + item1*5|920|Arjun|31-07-2021 21:02:22|Successful$

@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1627757901 source:d:\6th sem\fs lab\grocery delivery details system\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+	<cstring>
+	<ctime>
+
+1628243284 source:d:\amaan\projects\file structures project\grocery database\grocery delivery details system\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<stdio.h>
+	<stdlib.h>
+	<cstring>
+	<ctime>
+	<windows.h>
+

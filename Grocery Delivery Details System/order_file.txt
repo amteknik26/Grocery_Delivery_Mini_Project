@@ -1,0 +1,4 @@
+1|Akhil|6361929608|Spar|item1*5 + item3*10|470|Assigning soon|Assigning soon$
+2|Amaan|9966332255|walmart|item1*5 + item2*5|570|Assigning soon|Assigning soon$
+3|Akhil|6361929608|walmart|item1*10 + item2*10|1120|Assigning soon|Assigning soon$
+4|Amaan|9966332255|Spar|item1*10 + item1*5|920|Assigning soon|Assigning soon$
