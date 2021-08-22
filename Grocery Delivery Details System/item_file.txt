@@ -1,3 +1,12 @@
-st01|s1it01|item1|20|60$
-st02|s2it01|item1|20|30$
-st03|s3it01|item1|25|25$
+st01|s1it01|Tomato|20|34$
+st01|s1it02|Chips|20|20$
+st01|s1it03|Chilli|20|28$
+st01|s1it04|Pepsi|20|35$
+st01|s1it05|Imli|20|15$
+st02|s2it01|Onions|20|38$
+st02|s2it02|Potato|20|30$
+st02|s2it03|VimBar|20|20$
+st03|s3it01|Crocin|25|68$
+st03|s3it02|Vicks|25|50$
+st03|s3it03|Vitamin|25|105$
+

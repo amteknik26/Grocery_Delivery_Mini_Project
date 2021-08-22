@@ -1,4 +1,4 @@
-#include <iostream>
+#include<iostream>
 #include<fstream>
 #include<string>
 #include<sstream>
@@ -7,12 +7,10 @@
 #include<cstring>
 #include<ctime>
 #include<windows.h>
-
 using namespace std;
 string do_id[100];
 int do_count;
 COORD coord = {0, 0};
-
 void gotoxy (int x, int y)
 {
     coord.X = x;
@@ -70,14 +68,14 @@ public:
 
 void customer :: read_customer_data()
 {
-    cout<<"\nEnter your details:\n";
-    cout<<"Username: ";
+    cout<<"\nEnter your details :- \n";
+    cout<<"Username : ";
     cin>>customer_username;
-    cout<<"Address: ";
+    cout<<"Address : ";
     cin>>customer_address;
-    cout<<"Mobile Number: ";
+    cout<<"Mobile Number : ";
     cin>>customer_mobile;
-    cout<<"Email: ";
+    cout<<"Email : ";
     cin>>customer_email;
 }
 
@@ -154,7 +152,7 @@ void customer :: display_customer()
             customer_unpack();
             if(customer_email==temp)
                 break;
-            cout<<customer_mobile<<"\t\t"<<customer_username<<"\t\t"<<customer_address<<"\t\t"<<customer_email<<endl;
+            cout<<customer_mobile<<"\t\t"<<customer_username<<"\t\t"<<customer_address<<"\t\t\t\t"<<customer_email<<endl;
             temp=customer_email;
         }
         file.close();
@@ -282,14 +280,14 @@ void employee :: display_employee()
     else
     {
         file.open("employee_file.txt",ios::in);
-        cout<<"Customer Mobile No.\tCustomer Name\tCustomer Address\t\t\n";
+        cout<<"Employee Mobile No.\tEmployee Name\tEmployee Address\t\tEmployee Email\n";
         while(!file.eof())
         {
             getline(file,buffer);
             employee_unpack();
             if(employee_email==temp)
                 break;
-            cout<<employee_mobile<<"\t\t"<<employee_username<<"\t\t"<<employee_address<<"\t\t"<<employee_email<<endl;
+            cout<<employee_mobile<<"\t\t"<<employee_username<<"\t\t"<<employee_address<<"\t\t\t\t"<<employee_email<<endl;
             temp=employee_email;
         }
         file.close();
@@ -321,14 +319,14 @@ public:
 
 void store :: read_store()
 {
-    cout<<"Enter Store Details: \n";
-    cout<<"Store ID: ";
+    cout<<"Enter Store Details : \n";
+    cout<<"Store ID : ";
     cin>>store_id;
-    cout<<"Store Name: ";
+    cout<<"Store Name : ";
     cin>>store_name;
-    cout<<"Store Address: ";
+    cout<<"Store Address : ";
     cin>>store_address;
-    cout<<"Store Phone Number: ";
+    cout<<"Store Phone Number : ";
     cin>>store_phone;
 }
 
@@ -445,14 +443,14 @@ void store :: display_store()
     else
     {
         file.open("store_file.txt",ios::in);
-        cout<<"Store ID\tStore Name\tStore Address\tStore Phone Number\n";
+        cout<<"\nStore ID\tStore Name\t\tStore Address\t\tStore Phone Number\n";
         while(!file.eof())
         {
             getline(file,buffer);
             store_unpack();
             if(store_phone==temp)
                 break;
-            cout<<store_id<<"\t\t"<<store_name<<"\t\t"<<store_address<<"\t\t"<<store_phone<<endl;
+            cout<<store_id<<"\t\t"<<store_name<<"\t\t\t"<<store_address<<"\t\t\t\t"<<store_phone<<endl;
             temp=store_phone;
         }
         file.close();
@@ -554,13 +552,13 @@ void store :: update_store(string key)
     cin>>ch;
     switch(ch)
     {
-        case 1: cout<<"Enter new Name: ";
+        case 1: cout<<"Enter new Name : ";
                 cin>>name;
                 break;
-        case 2: cout<<"Enter new Address: ";
+        case 2: cout<<"Enter new Address : ";
                 cin>>address;
                 break;
-        case 3: cout<<"Enter new Phone Number: ";
+        case 3: cout<<"Enter new Phone Number : ";
                 cin>>phone;
                 break;
         default:cout<<"Invalid choice\n";
@@ -606,7 +604,7 @@ void store :: update_store(string key)
         cout<<"\nRecord Updated \n";
     }
     else
-        cout<<"record not found\n";
+        cout<<"Record not found\n";
 }
 
 class item
@@ -634,13 +632,13 @@ public:
 void item :: read_item(string str_id)
 {
     st_id=str_id;
-    cout<<"Item ID: ";
+    cout<<"Item ID : ";
     cin>>item_id;
-    cout<<"Item Name: ";
+    cout<<"Item Name : ";
     cin>>item_name;
-    cout<<"Item quantity: ";
+    cout<<"Item quantity : ";
     cin>>item_quantity;
-    cout<<"Item price: ";
+    cout<<"Item price : ";
     cin>>item_price;
 }
 
@@ -1297,7 +1295,7 @@ int main()
         cout<<"*********************************************************************************\n";
         cout<<"*                                                                               *\n";
         cout<<"*\t\t\t\tHelpy Hands\t\t\t\t\t*\n";
-        cout<<"*\t\t\t    Login/Registration\t\t\t\t*\n";
+        cout<<"*\t\t\t    Login/Registration\t\t\t\t\t*\n";
         cout<<"*                                                                               *\n";
         cout<<"*********************************************************************************\n";
         cout<<"*                                                                               *\n";
@@ -1311,7 +1309,7 @@ int main()
         {
             case 1: cout<<"\nEnter your Username: ";
                     cin>>name;
-                    cout<<"Enter your Mobile Numeber: ";
+                    cout<<"Enter your Mobile Number: ";
                     cin>>phone;
                     flag=c.check_customer(name,phone);
                     if(flag==0)
@@ -1322,8 +1320,12 @@ int main()
                     for(;;)
                     {
                         system("cls");
+                        cout<<"***********************************************************\n";
+                        cout<<"*                                                         *";
                         cout<<"\n\t     Welcome "<<name<<"\n\tWe are here to serve YOU\n";
-                        cout<<"\n1: Place Order\t\t2: View Pending Orders\n3: View Past Orders\t4: Delivery Details\n\t\t5: Logout?\n";
+                        cout<<"\n1: Place Order\t\t2: View Pending Orders\n3: View Past Orders\t4: Delivery Details\n\t\t5: Logout\n";
+                        cout<<"*                                                         *\n";
+                        cout<<"***********************************************************\n";
                         cout<<"Enter your choice: ";
                         cin>>ch;
                         switch(ch)
@@ -1331,10 +1333,10 @@ int main()
                             case 1: for(;;)
                                     {
                                         s.display_store();
-                                        cout<<"Enter store id and store name to select items from that store: \n";
-                                        cout<<"store id: ";
+                                        cout<<"Enter store id and store name to select items from that store : \n";
+                                        cout<<"Store id : ";
                                         cin>>temp;
-                                        cout<<"store name: ";
+                                        cout<<"Store name : ";
                                         string str_name;
                                         cin>>str_name;
                                         if(s.search_store(temp)==1)
@@ -1441,7 +1443,8 @@ int main()
                                             cout<<"Invalid choice\n";
                                     }
 
-                            case 5: break;
+                            case 5: system("cls");
+                                break;
 
                             default:cout<<"\nInvalid choice\n";
                         }
@@ -1464,9 +1467,11 @@ int main()
                         break;
                     }
                     for(;;)
-                    {
+                    {   system("cls");
+                        cout<<"*******************************************************************\n";
                         cout<<"\t\t\tWelcome "<<name;
                         cout<<"\n1: Check pending deliveries\t2: Finalize Delivery\n3: View successful deliveries\t4: Logout\n";
+                        cout<<"*******************************************************************\n";
                         cout<<"Enter your choice: ";
                         cin>>ch;
                         if(ch==1)
@@ -1531,6 +1536,7 @@ int main()
                         }
                         else if(ch==4)
                         {
+                            system("cls");
                             break;
                         }
                         else
@@ -1544,13 +1550,13 @@ int main()
                     cin>>name;
                     cout<<"Enter Password: ";
                     cin>>password;
-                    if(name!="ADMIN" || password!="54321")
+                    if(name!="ADMIN" || password!="1")
                     {
                         cout<<"Invalid Credentials\nTry Again!\n";
                         break;
                     }
                     for(;;)
-                    {
+                    {   system("cls");
                         cout<<"\n*************************************************************************";
                         cout<<"\n|\t\t\t\tADMIN\t\t\t\t\t|";
                         cout<<"\n*************************************************************************";
@@ -1592,6 +1598,7 @@ int main()
                                         cin>>sch;
                                         if(sch==1)
                                         {
+                                            e.display_employee();
                                             cout<<"\nEnter Order ID: ";
                                             cin>>ord_id;
                                             cout<<"Enter Employee Name: ";
@@ -1706,22 +1713,24 @@ int main()
                                     }
                                     break;
 
-                            case 6: for(;;)
+                            case 5: for(;;)
                                     {
                                         d.display_delivery(name);
                                         cout<<"Enter 0 to exit: ";
                                         cin>>ch;
-                                        if(ch==1)
+                                        if(ch==0)
+                                        {
                                             break;
+                                        }
                                         else
                                             cout<<"Invalid choice\n";
                                     }
 
-                            case 7: break;
-
+                            case 6:system("cls");
+                                break;
                             default:cout<<"Invalid choice\n";
                         }
-                        if(ch==7)
+                        if(ch==6)
                             break;
                     }
                     break;
@@ -1730,11 +1739,13 @@ int main()
             case 4: c.read_customer_data();
                     c.customer_pack();
                     c.write_to_customer_file();
+                    system("cls");
                     break;
 
             case 5: e.read_employee_data();
                     e.employee_pack();
                     e.write_to_employee_file();
+                    system("cls");
                     break;
 
             case 6: return 0;
