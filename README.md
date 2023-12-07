@@ -68,12 +68,33 @@ curl --location 'http://13.48.26.55:3000/equipment' \
 curl --location --request DELETE 'http://13.48.26.55:3000:3000/manufacturer/123e4567-e89b-12d3-a456-426614174000'
 ```
 
+### Delete an Equipment
+```cURL
+curl --location --request DELETE 'http://localhost:3000/equipment/123e4567-e89b-12d3-a456-42661417400e'
+```
+
+### Update a Manufacturer 
+```cURL
+curl --location --request PUT 'http://13.48.26.55:3000/manufacturer/123e4567-e89b-12d3-a456-426614174001' \
+--header 'Content-Type: application/json' \
+--data '{"name": "High Elves"}'
+```
+
+### Update an Equipment 
+```cURL
+curl --location --request PUT 'http://13.48.26.55:3000/equipment/123e4567-e89b-12d3-a456-42661417400e' \
+--header 'Content-Type: application/json' \
+--data '{"model": "Forbidden Nectar", "serialNumber": "093461Z"}'
+```
+
 ### Update the Manufacturer of an Equipment (Update relationship)
 ```cURL
 curl --location --request PUT 'http://13.48.26.55:3000:3000/equipment/manufacturer/e1f22531-2b49-4228-ab83-87315fc996b7' \
 --header 'Content-Type: application/json' \
 --data '{"manufacturerId": "1a225537-455d-491f-a120-5dbeb4aaf5d0"}'
 ```
+
+
 
 You can also fork my Postman collection here to test all endpoints with more control :
 https://www.postman.com/descent-module-cosmologist-24341852/workspace/beamdynamics-amaan/collection/20327661-b0fb0082-43b3-4848-b7a1-4739b507c74b?action=share&creator=20327661
